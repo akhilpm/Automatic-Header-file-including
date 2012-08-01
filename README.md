@@ -11,7 +11,7 @@ NOTE
   i will trying to avoid this later)
 
 This program is not fully tested with all the cases.But it will work fine for moderate length codes.
-Sometimes it may detect stack smashing errors while including headers like '# include <sys/types.h>' (for the meth
-od socket)since it is declared in man page as ' #include sys/types.h        /* See NOTES */'. since there are 
+Sometimes it may detect stack smashing errors while including headers like '# include sys/types.h' (for the method 
+socket)since it is declared in man page as ' #include sys/types.h        /* See NOTES */'.The error is because of
 some extra characters(/* see NOTES */) along with the header file.The code is simple and it requires further debugging
 to solve all the problems.But for almost all programs this will work fine.
